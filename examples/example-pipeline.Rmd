@@ -2,7 +2,6 @@
 library(scRNAseq.Cancer.Rpackage)
 
 ### Initiual Clustering followed by (batch correction and re-clustering)
-
 # orig.seurat: Seurat object created from single-cell rna-seq UMI counts (this code is focused on 10x genomics platform.)
 # nHVGs: number of highly variable genes which is used for initial clustering
 # dims: number of dimensions from PCA which is used for initial clustering
@@ -19,4 +18,18 @@ target.celltype <- "Cancer.cell"
 Idents(harmony.seurat) <- "celltype.attribute" # celltype.attribute indicates column name in meta.data of harmony.seurat contains cell.type label information
 celltype_specific.seurat = subset(harmony.seurat, cells = target.celltype)
 DEG_results = seurat2pseudobulk_DEA(celltype_specific.seurat, metadata) # metadata for DESeq2 analysis (row.names = colnames of aggregated counts matrix from scRNA-seq data, contrast.group = contrast.group)
+
+### PAM50 prediction (only for cancer cells from primary or metastatic breast cancer)
+target.celltype <- "Cancer.cell"
+Idents(harmony.seurat) <- "celltype.attribute" # celltype.attribute indicates column name in meta.data of harmony.seurat contains cell.type label information
+celltype_specific.seurat = subset(harmony.seurat, cells = target.celltype)
+pam50.results = seurat2PAM50(celltype_specific.seurat)
+
+### TF-regulon activity estimation
+target.celltype <- "T.CD8"
+Idents(harmony.seurat) <- "celltype.attribute" # celltype.attribute indicates column name in meta.data of harmony.seurat contains cell.type label information
+celltype_specific.seurat = subset(harmony.seurat, cells = target.celltype)
+dorothea_regulon_human <- get(data("dorothea_hs", package = "dorothea"))
+regulon <- dorothea_regulon_human %>% dplyr::filter(confidence %in% c("A","B","C")) # user can change the confidence level in dorothea
+dorothea_regulon_results <- seurat2dorothea(celltype_specific.seurat, regulon)
 
