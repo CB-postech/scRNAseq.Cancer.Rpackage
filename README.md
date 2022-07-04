@@ -4,7 +4,7 @@ Workflow for single-cell RNA-seq analysis (especially focused on breast cancer d
 
 ## Installation
 
-devtools::install_github('CB-postech/scRNAseq.Cancer.Rpackage')
+> devtools::install_github('CB-postech/scRNAseq.Cancer.Rpackage')
 
 
 ## Scripts
