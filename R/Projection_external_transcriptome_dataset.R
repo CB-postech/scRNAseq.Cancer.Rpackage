@@ -4,9 +4,9 @@
 # Jaitin, Diego Adhemar, et al. "Lipid-associated macrophages control metabolic homeostasis in a Trem2-dependent manner." Cell 178.3 (2019): 686-698.
 
 #' @title Projecting external dataset (transcriptome data) to my own dataset
-#' @description KernelKNN (with pearson correlation option)
-#' @param seurat.obj, RNAseq.query_dataset
-#' @return proj.pca.location
+#' @description Projection the public/external dataset using KernelKNN (with pearson correlation option) method to your own dataset
+#' @param seurat.obj RNAseq.query_dataset
+#' @return proj.pca.location: Projected coordinates of public/external dataset on the dimension reduction plot from your own dataset
 #' @details RNAseq.query_dataset: external dataset, seurat.obj: my own dataset
 #' @name projection2seurat
 #' @export
