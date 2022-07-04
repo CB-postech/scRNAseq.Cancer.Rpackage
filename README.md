@@ -10,6 +10,7 @@ devtools::install_github('CB-postech/scRNAseq.Cancer.Rpackage')
 ## Scripts
 
 #### scRNA Analysis Scripts
-` Integrative_clustering.R    
+_Integrative_clustering.R    _
+
 -make seurat object from raw umi counts    
 -run harmony for batch correction and re-clustering    
