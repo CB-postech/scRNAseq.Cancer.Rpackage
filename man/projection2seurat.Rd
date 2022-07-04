@@ -4,13 +4,13 @@
 \alias{projection2seurat}
 \title{Projecting external dataset (transcriptome data) to my own dataset}
 \arguments{
-\item{seurat.obj, }{RNAseq.query_dataset}
+\item{seurat.obj}{RNAseq.query_dataset}
 }
 \value{
-proj.pca.location
+proj.pca.location: Projected coordinates of public/external dataset on the dimension reduction plot from your own dataset
 }
 \description{
-KernelKNN (with pearson correlation option)
+Projection the public/external dataset using KernelKNN (with pearson correlation option) method to your own dataset
 }
 \details{
 Projection of external dataset
