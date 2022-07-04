@@ -1,3 +1,4 @@
+# devtools::install_github('CB-postech/scRNAseq.Cancer.Rpackage')
 library(scRNAseq.Cancer.Rpackage)
 
 # orig.seurat: Seurat object created from single-cell rna-seq UMI counts (this code is focused on 10x genomics platform.)
