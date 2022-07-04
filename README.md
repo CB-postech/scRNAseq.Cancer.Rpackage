@@ -19,3 +19,8 @@ devtools::install_github('CB-postech/scRNAseq.Cancer.Rpackage')
 -make external transcriptome data to pseudobulk form    
 -projection using KernelKNN method
 
+#### Pseudobulk DEG ananlysis 
+*Pseudobulk_DEG_analysis_in_scRNAseq.R*
+-make scRNA-seq data to pseudobulk form (aggregate by batch or donor)    
+-using DESeq2 to retrieve differentially expressed genes from user-defined contrast design
+
