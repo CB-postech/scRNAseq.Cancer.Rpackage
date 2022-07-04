@@ -36,7 +36,7 @@ Workflow for single-cell RNA-seq analysis (especially focused on breast cancer d
 -refine the results from scHCL by considering the tissue origin where you resected    
 
 #### Estimation of TF-regulon activity
-*seurat2dorothea.R*
--user should pre-define confidence level and species to set regulon 
--from seurat object, calculate the activity by using DoRothEA package 
+*seurat2dorothea.R*    
+-user should pre-define confidence level and species to set regulon    
+-from seurat object, calculate the activity by using DoRothEA package    
 
