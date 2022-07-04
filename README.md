@@ -4,11 +4,13 @@ Workflow for single-cell RNA-seq analysis (especially focused on breast cancer d
 
 ## Installation
 
-> devtools::install_github('CB-postech/scRNAseq.Cancer.Rpackage')
+```
+devtools::install_github('CB-postech/scRNAseq.Cancer.Rpackage')
+```
 
 ## Pre-requisite R packages you should install before use this package
 ```
-Seurat (>= 4.0.0), scater, scRNAseq, genefu, harmony, dplyr, KernelKnn, tidyverse, DESeq2, rlist, data.table    
+Seurat (>= 4.0.0), scater (v1.18.6), scRNAseq (v2.4.0), genefu (2.22.1), harmony (v0.1.0), dplyr (v1.0.7), KernelKnn (v1.1.4), tidyverse (v1.3.1), DESeq2 (v1.30.1)    
 ```
 
 ## Scripts
