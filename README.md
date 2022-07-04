@@ -20,7 +20,17 @@ devtools::install_github('CB-postech/scRNAseq.Cancer.Rpackage')
 -projection using KernelKNN method
 
 #### Pseudobulk DEG ananlysis 
-*Pseudobulk_DEG_analysis_in_scRNAseq.R*
+*Pseudobulk_DEG_analysis_in_scRNAseq.R*    
 -make scRNA-seq data to pseudobulk form (aggregate by batch or donor)    
--using DESeq2 to retrieve differentially expressed genes from user-defined contrast design
+-using DESeq2 to retrieve differentially expressed genes from user-defined contrast design    
 
+#### PAM50 classification in scRNA-seq to reveal molecular subtypes of breast cancer cells
+*scRNAseq_PAM50_prediction.R*    
+-prepare normalized counts matrix
+-using genefu package to predict molecular subtypes of breast cancer cells
+
+#### Cell-of-Origin prediction in scRNA-seq 
+*seurat2CellofOrigin.R*    
+-prepare normalized counts matrix    
+-using scHCL package to predict cell-of-origins of your own single-cell rna-seq data    
+-refine the results from scHCL by considering the tissue origin where you resected    
