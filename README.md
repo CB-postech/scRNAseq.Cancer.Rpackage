@@ -1,12 +1,12 @@
 # scRNAseq.Cancer.Rpackage
 
-Workflow for single-cell RNA-seq analysis 
+Workflow for single-cell RNA-seq analysis (especially focused on breast cancer dataset)
 
-### Installation
+# Installation
 devtools::install_github('CB-postech/scRNAseq.Cancer.Rpackage')
 
 
-# Scripts:
+# Scripts
 
 scRNA Analysis Scripts
 Integrative_clustering.R
